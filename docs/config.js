@@ -8,6 +8,12 @@ docute.init({
         },
         {
             title: '客户端接口',path:'/ClientAPI'
+        },
+        {
+            title: '服务端接口',path:'/ServerAPI'
+        },
+        {
+            title: '管理员接口',path:'/AdminAPI'
         }
     ],
     tocVisibleDepth: 2,
