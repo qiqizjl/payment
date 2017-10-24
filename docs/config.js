@@ -6,6 +6,9 @@ docute.init({
         {
             title: '首页', path: '/'
         },
+        {
+            title: 'Api接口说明',path:'/api'
+        }
     ],
     tocVisibleDepth: 2,
     plugins: []
