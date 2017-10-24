@@ -7,7 +7,7 @@ docute.init({
             title: '首页', path: '/'
         },
         {
-            title: 'Api接口说明',path:'/Api'
+            title: '客户端接口',path:'/ClientAPI'
         }
     ],
     tocVisibleDepth: 2,
