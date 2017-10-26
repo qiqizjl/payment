@@ -2,6 +2,7 @@
 ## 接口说明
 ### 请求说明
  请求的时候需要在Header中带上两个header
+ 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
 |P-Appid|string| Appid，通过AdminApi获取|
