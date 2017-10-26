@@ -58,6 +58,7 @@ GET
 
 ### 返回字段
 | 字段名 | 数据类型 | 说明|
+| ----- | ------- | --- |
 |`orderId`|string|联合订单号|
 |`order`|string|订单号|
 |`payment`| int|金额 单位分|
