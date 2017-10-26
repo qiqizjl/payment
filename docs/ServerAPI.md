@@ -59,12 +59,13 @@ GET
 ### 返回字段
 | 字段名 | 数据类型 | 说明|
 | ----- | ------- | --- |
-|`orderId`|string|联合订单号|
-|`order`|string|订单号|
-|`payment`| int|金额 单位分|
-|`pay`|int|支付方式|
-|`status`|int|状态 0=未支付 1=已支付 2=有退款|
-|`success_time`|int|支付成功时间戳|
+|`order` | object|订单数据|
+|`order.orderId`|string|联合订单号|
+|`order.order`|string|订单号|
+|`order.payment`| int|金额 单位分|
+|`order.pay`|int|支付方式|
+|`order.status`|int|状态 0=未支付 1=已支付 2=有退款|
+|`order.success_time`|int|支付成功时间戳|
 
 ## 支付成功回调
 
