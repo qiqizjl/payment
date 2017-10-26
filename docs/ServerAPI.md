@@ -1,4 +1,26 @@
 # 服务端API
+## 接口说明
+### 请求说明
+ 请求的时候需要在Header中带上两个header
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+|P-Appid|string| Appid，通过AdminApi获取|
+|P-Sign|string|签名|
+
+### 签名规则
+base64(Appid+":"+time+":"+sign)
+
+sign具体获得
+
+MD5(appid+time+appsecert)
+
+### 返回说明
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+| `rs`|int | 0=异常 1=正常|
+| `msg`|string|错误消息|
+|`data`| array| 数据，接口中的返回值都在此中|
+
 ## 预下单
 ### Api地址
 /api/unifiedorder
