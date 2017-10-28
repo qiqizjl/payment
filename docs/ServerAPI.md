@@ -8,6 +8,8 @@
 |P-Appid|string| Appid，通过AdminApi获取|
 |P-Sign|string|签名|
 
+若请求为POST，那么将请求json格式化之后，放在body中请求
+
 ### 签名规则
 base64(Appid+":"+time+":"+sign)
 
@@ -66,6 +68,13 @@ GET
 |`order.pay`|int|支付方式|
 |`order.status`|int|状态 0=未支付 1=已支付 2=有退款|
 |`order.success_time`|int|支付成功时间戳|
+| `refund` | array | 退款数据|
+|`refund.refund`| string| 退款订单号|
+|`refund.refundid`|string|联合退款订单号|
+|`refund.payment`| int|退款金额|
+|`refund.status` | int|状态|
+|`refund.created_at`| int|创建退款时间|
+|`refund.success_time` | int|退款成功时间|
 
 ## 支付成功回调
 
@@ -74,3 +83,19 @@ GET
 通过预下单接口获得订单号之后，将网页跳转到``pay/pay?orderId=:orderId``即可，系统会根据浏览器环境自动判断对应的支付方式，去调用支付
 
 ## 发起退款
+### Api地址
+/refund
+
+### 请求方式
+POST
+
+### 请求参数
+| 字段名 | 数据类型 | 默认值 | 说明 |
+| ----- | ------- | ----- | --- |
+| `order` | string | - | 订单号| 
+| `orderId` | string | - | 联合订单号| 
+| `payment` | int| - | 退款金额|
+| `reason` | string| - |退款理由|
+|  `refund` | string | - |退款订单号|
+
+### 返回字段
